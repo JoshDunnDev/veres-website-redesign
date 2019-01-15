@@ -1,0 +1,249 @@
+/* You can add global styles to this file, and also import other style files */
+@import '/vars';
+
+@function colors($color-name) {
+    @return map-get($colors, $color-name );
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        color: colors(main-text);
+        line-height: 1.6em;
+        margin: 0;
+    }
+
+    header{
+        border-bottom: 1px solid colors(line-color);
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+    
+        nav {
+            height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1130px;
+            margin: auto;
+    
+            #logo {
+                height: 46px;
+    
+                img {
+                    height: 100%;
+                }
+            }
+    
+            #nav-links {
+                display: flex;
+                align-items: center;
+
+                .nav-link {
+                    height: 19px;
+                }
+    
+    
+                a {
+                    padding: 10px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: colors(title-text);
+                }
+
+                .dropdown-toggle::after {
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    margin-left: .255em;
+                    vertical-align: .255em;
+                    content: "";
+                    border-top: .3em solid colors(main-color);
+                    border-right: .3em solid transparent;
+                    border-bottom: 0;
+                    border-left: .3em solid transparent;
+                }
+
+                .dropdown-menu {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #fff;
+                    box-shadow: $box-shadow-settings;
+                    top: 73px;
+                    min-width: 170px;
+
+                    .dropdown-item {
+                        color: colors(main-text);
+                        border-bottom: 1px solid colors(line-color);
+                    }
+
+                    .dropdown-item:last-child {
+                        border-bottom: none;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    main {
+        padding-top: 72px;
+
+        #about {
+            max-width: 660px;
+            margin: auto;
+
+
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+                color: colors(title-text);
+                padding: 72px 0 25px;
+                margin: 0;
+            }
+
+            p{
+                text-align: center;
+            }
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: colors(line-color);
+            max-width: 1130px;
+            margin: 72px auto;
+        }
+
+        #use-cases {
+            max-width: 1130px;
+            margin: auto;
+
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+                color: colors(title-text);
+                padding-bottom: 25px;
+                margin: 0;
+            }
+            .use-case-buttons {
+                display: flex;
+
+                .use-case-button{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 25%;
+                    cursor: pointer;
+
+                    img {
+                        height: 60px;
+                        width: auto;
+                    }
+
+                    h1 {
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        font-weight: 500px;
+                        color: colors(title-text);
+                        width: 130px;
+                        padding: 18px 0;
+                    }
+                }
+            }
+
+            .use-case-box {
+                .use-case-track {
+                    height: 3px;
+                    width: 100%;
+                    background-color: colors(line-color);
+                    display: flex;
+
+                    hr {
+                        height: 3px;
+                        margin: 0;
+                        width: 25%;
+                    }
+
+                    .use-case-selected {
+                        background-color: colors(main-color);
+                    }
+                }
+
+
+
+                .use-case-content {
+                    display: flex;
+                    padding: 50px 50px 50px 0;
+                    box-shadow: $box-shadow-settings;
+                    align-items: center;
+                    justify-content: center;
+    
+                    .use-case-icon-lg {
+                        width: 35%;
+                        text-align: center;
+    
+                        img{
+                            height: 120px;
+                            width: auto;
+                        }
+                    }
+    
+                    .use-case-info {
+                        width: 65%;
+    
+                        h1 {
+                            text-align: left;
+                        }
+    
+                        button {
+                            background-color: colors(main-color);
+                            color: #fff;
+                            border-radius: 55px;
+                            width: 160px;
+                            height: 55px;
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            font-family: 'Helvetica Neue', Arial, sans-serif;
+                            font-weight: bold;
+                            margin-top: 50px;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+    }
+
+
+
+
+
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 72px;
+        background-color: colors(main-color);
+
+        span {
+            font-size: 16px;
+            font-weight: 400;
+            color: #fff;
+        }
+    }
+}
+
