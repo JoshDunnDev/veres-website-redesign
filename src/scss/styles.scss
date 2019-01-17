@@ -5,6 +5,20 @@
     @return map-get($colors, $color-name );
 }
 
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+
+
 body {
     margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -22,20 +36,39 @@ body {
         position: fixed;
         width: 100%;
         background-color: #fff;
+
+        @include mobile {
+            position: relative;
+            border-bottom: none;
+        }
     
         nav {
             height: 72px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1130px;
+            max-width: $desktop-width;
             margin: auto;
+
+            @include mobile {
+                display: block;
+                height: auto;
+            }
     
             #logo {
                 height: 46px;
+
+                @include tablet {
+                    padding-left: 25px;
+                }
     
                 img {
                     height: 100%;
+
+                    @include mobile {
+                        height: 36px;
+                        padding: 13px 0 13px 25px;
+                    }
                 }
             }
     
@@ -43,10 +76,37 @@ body {
                 display: flex;
                 align-items: center;
 
-                .nav-link {
-                    height: 19px;
+                @include tablet {
+                    padding-right: 25px;
                 }
-    
+
+                @include mobile {
+                    box-shadow: none;
+                    width: 100%;
+                    display: none;
+                    border-top: 1px solid colors(line-color);
+                }
+
+
+                .nav-link {
+                    height: 73px;
+                    display: flex;
+                    align-items: center;
+
+                    @include mobile {
+                        border-bottom: 1px solid colors(line-color);
+                        display: block;
+                        height: auto;
+                    }
+
+                    a {
+                        padding: 10px;
+                    }
+
+                    a:hover {
+                        color: colors(main-color);
+                    }
+                }
     
                 a {
                     padding: 10px;
@@ -55,6 +115,23 @@ body {
                     font-size: 16px;
                     font-weight: bold;
                     color: colors(title-text);
+
+                    @include mobile {
+                        padding: 10px;
+                    }
+                }
+
+                a:hover {
+                    color: colors(main-color);
+                }
+
+
+
+                .dropdown-toggle {
+                    @include mobile {
+                        padding: 10px 0;
+                        display: block;
+                    }
                 }
 
                 .dropdown-toggle::after {
@@ -72,30 +149,97 @@ body {
 
                 .dropdown-menu {
                     position: absolute;
-                    display: flex;
+                    display: none;
                     flex-direction: column;
                     background-color: #fff;
                     box-shadow: $box-shadow-settings;
                     top: 73px;
                     min-width: 170px;
 
+                    @include mobile {
+                        position: relative;
+                        top: 0;
+                        display: none;
+                        box-shadow: none;
+                        border-top: 1px solid colors(line-color);
+                    }
+
                     .dropdown-item {
                         color: colors(main-text);
                         border-bottom: 1px solid colors(line-color);
+
+                        @include mobile {
+                            display: block;
+                            padding: 10px 20px;
+                        }
                     }
 
                     .dropdown-item:last-child {
                         border-bottom: none;
                     }
+
+                    .nav-selected {
+                        color: colors(main-color);
+                    }
                 }
 
+                .show-dropdown {
+                    display: flex;
 
+                    @include mobile {
+                        display: block;
+                    }
+                }
+
+                .nav-link:hover .dropdown-menu {
+                    display: flex;
+                }
+
+                .nav-selected {
+                    color: colors(main-color);
+                }
+            }
+
+            #nav-links .nav-link:nth-child(4) {
+                @include mobile {
+                    border-bottom: none;
+                }
+            }
+
+            .show-nav {
+                @include mobile {
+                    display: block !important;
+                }
+            }
+
+            .hide-nav {
+                @include mobile {
+                    display: none !important;
+                }
+            }
+        }
+
+        .hamburger-menu-button {
+            position: absolute;
+            height: 26px;
+            display: none;
+            top: 0;
+            right: 0;
+
+            @include mobile {
+                display: block;
+                padding: 21px;
             }
         }
     }
 
     main {
         padding-top: 72px;
+
+        @include mobile {
+            padding-top: 0;
+            border-top: 1px solid colors(line-color);
+        }
 
         #about {
             max-width: 660px;
@@ -109,10 +253,20 @@ body {
                 color: colors(title-text);
                 padding: 72px 0 25px;
                 margin: 0;
+
+                @include mobile {
+                    padding: 25px 0 25px;
+                    font-size: 26px;
+                }
             }
 
             p{
                 text-align: center;
+
+                @include mobile {
+                    text-align: left;
+                    padding: 0  25px;
+                }
             }
         }
 
@@ -120,12 +274,16 @@ body {
             border: 0;
             height: 1px;
             background: colors(line-color);
-            max-width: 1130px;
+            max-width: $desktop-width;
             margin: 72px auto;
+
+            @include mobile {
+                margin: 36px auto;
+            }
         }
 
         #use-cases {
-            max-width: 1130px;
+            max-width: $desktop-width;
             margin: auto;
 
             h1 {
@@ -133,8 +291,13 @@ body {
                 font-size: 30px;
                 font-weight: bold;
                 color: colors(title-text);
-                padding-bottom: 25px;
+                padding-bottom: 50px;
                 margin: 0;
+
+                @include mobile {
+                    font-size: 26px;
+                    padding-bottom: 25px;
+                }
             }
             .use-case-buttons {
                 display: flex;
@@ -146,9 +309,17 @@ body {
                     width: 25%;
                     cursor: pointer;
 
+                    @include mobile {
+                        padding: 18px 0;
+                    }
+
                     img {
                         height: 60px;
                         width: auto;
+
+                        @include mobile {
+                            height: 50px;
+                        }
                     }
 
                     h1 {
@@ -158,6 +329,10 @@ body {
                         color: colors(title-text);
                         width: 130px;
                         padding: 18px 0;
+
+                        @include mobile {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -188,10 +363,24 @@ body {
                     box-shadow: $box-shadow-settings;
                     align-items: center;
                     justify-content: center;
+
+                    @include tablet {
+                        padding: 50px 50px 0 0px;
+                        box-shadow: none;
+                    }
+
+                    @include mobile {
+                        padding: 25px 25px 0 25px;
+                        box-shadow: none;
+                    }
     
                     .use-case-icon-lg {
                         width: 35%;
                         text-align: center;
+
+                        @include mobile {
+                            display: none;
+                        }
     
                         img{
                             height: 120px;
@@ -201,9 +390,24 @@ body {
     
                     .use-case-info {
                         width: 65%;
+
+                        @include mobile {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
     
                         h1 {
                             text-align: left;
+                            font-size: 26px;
+                            padding-bottom: 25px;
+                            font-weight: 500px;
+
+                            @include mobile {
+                                text-align: center;
+                                font-size: 22px;
+                            }
                         }
     
                         button {
@@ -215,8 +419,9 @@ body {
                             text-transform: uppercase;
                             font-size: 16px;
                             font-family: 'Helvetica Neue', Arial, sans-serif;
-                            font-weight: bold;
-                            margin-top: 50px;
+                            font-weight: 500;
+                            margin-top: 25px;
+                            cursor: pointer;
                         }
                     }
 
@@ -225,12 +430,383 @@ body {
             }
 
         }
+
+
+        #veres-ecosystem {
+            max-width: $desktop-width;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+                color: colors(title-text);
+                padding-bottom: 50px;
+                margin: 0;
+
+                @include mobile {
+                    padding-bottom: 25px;
+                    font-size: 26px;
+                }
+            }
+
+            .veres-ecosystem-cycle {
+                height: 390px;
+                width: auto;
+                margin: auto;
+                padding-bottom: 50px;
+
+                @include mobile {
+                    height: 300px;
+                    padding-bottom: 25px;
+                }
+            }
+
+            .veres-ecosystem-buttons {
+                display: flex;
+
+                .veres-ecosystem-button{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 25%;
+                    cursor: pointer;
+
+                    @include mobile {
+                        padding: 18px 0;
+                    }
+
+                    img {
+                        height: 60px;
+                        width: auto;
+
+                        @include mobile {
+                            height: 50px;
+                        }
+                    }
+
+                    h1 {
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        font-weight: 500px;
+                        color: colors(title-text);
+                        width: 130px;
+                        padding: 18px 0;
+
+                        @include mobile {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .veres-ecosystem-box {
+                .veres-ecosystem-track {
+                    height: 3px;
+                    width: 100%;
+                    background-color: colors(line-color);
+                    display: flex;
+
+                    hr {
+                        height: 3px;
+                        margin: 0;
+                        width: 25%;
+                    }
+
+                    .veres-ecosystem-selected {
+                        background-color: colors(main-color);
+                    }
+                }
+
+
+
+                .veres-ecosystem-content {
+                    display: flex;
+                    padding: 50px 50px 50px 0;
+                    box-shadow: $box-shadow-settings;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include tablet {
+                        padding: 50px 50px 0 0px;
+                        box-shadow: none;
+                    }
+
+                    @include mobile {
+                        padding: 25px 25px 0 25px;
+                        box-shadow: none;
+                    }
+    
+                    .veres-ecosystem-icon-lg {
+                        width: 35%;
+                        text-align: center;
+
+                        @include mobile {
+                            display: none;
+                        }
+    
+                        img{
+                            height: 120px;
+                            width: auto;
+                        }
+                    }
+    
+                    .veres-ecosystem-info {
+                        width: 65%;
+
+                        @include mobile {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+    
+                        h1 {
+                            text-align: left;
+                            font-size: 26px;
+                            padding-bottom: 25px;
+                            font-weight: 500px;
+
+                            @include mobile {
+                                text-align: center;
+                                font-size: 22px;
+                            }
+                        }
+    
+                        button {
+                            background-color: colors(main-color);
+                            color: #fff;
+                            border-radius: 55px;
+                            width: 160px;
+                            height: 55px;
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            font-family: 'Helvetica Neue', Arial, sans-serif;
+                            font-weight: 500;
+                            margin-top: 25px;
+
+                            @include mobile {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        #media-mentions {
+            max-width: $desktop-width;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 50px;
+
+            @include mobile {
+                padding-bottom: 25px;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+                color: colors(title-text);
+                padding-bottom: 50px;
+                margin: 0;
+
+                @include mobile {
+                    padding-bottom: 25px;
+                    font-size: 26px;
+                }
+            }
+
+            .media-logos {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                .media-logo{
+                    width: 33%;
+                    text-align: center;
+
+                    @include mobile {
+                        width: 100%;
+                        padding: 10px 0;
+                    }
+
+                    img {
+                        width: 300px;
+                        height: auto;
+
+                        @include tablet {
+                            width: 200px;
+                        }
+
+                        @include mobile {
+                            width: 200px;
+                        }
+                    }
+    
+                    .reuters-logo {
+                        width: 138px;
+                        height: auto;
+
+                        @include tablet {
+                            width: 92px;
+                        }
+
+                        @include mobile {
+                            width: 92px;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        #slider {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            background-color: colors(slide-one-bg-color);
+            height: 520px;
+
+            @include tablet {
+                height: 460px;
+            }
+
+            @include mobile {
+                height: 400px;
+            }
+
+            .slides {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .left-arrow {
+                    margin-left: 25px;
+                }
+    
+                .slider-main {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include tablet {
+                        padding-left: 75px;
+                    }
+
+    
+                    .slider-image {
+                        @include mobile {
+                            display: none;
+                        }
+    
+                        img {
+                            height: 390px;
+                            width: auto;
+
+                            @include tablet {
+                                height: 300px;
+                            }
+                        }
+                    }
+        
+                    .slider-content {
+                        padding: 75px 0 75px 75px;
+
+                        @include tablet {
+                            padding: 50px;
+                        }
+
+                        @include mobile {
+                            padding: 50px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+        
+                        h1 {
+                            text-align: left;
+                            font-size: 46px;
+                            font-weight: bold;
+                            color: colors(slide-one-text-color);
+                            margin: 0; 
+
+                            @include tablet {
+                                font-size: 30px;
+                            }
+
+                            @include mobile {
+                                font-size: 26px;
+                                text-align: center;
+                            }
+                            
+                        }
+        
+                        p {
+                            font-size: 22px;
+                            font-weight: 500;
+                            max-width: 455px;
+                            color: colors(slide-one-text-color);
+                            padding: 25px 0;
+
+                            @include tablet {
+                                max-width: 300px;
+                                font-size: 16px;
+                            }
+
+                            @include mobile {
+                                text-align: center;
+                                max-width: 300px;
+                                font-size: 16px;
+                            }
+                        }
+        
+                        button {
+                            background-color: colors(slide-one-text-color);
+                            color: #fff;
+                            border-radius: 55px;
+                            width: 160px;
+                            height: 55px;
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            font-family: 'Helvetica Neue', Arial, sans-serif;
+                            font-weight: 500;
+                        }
+                    }
+                }
+    
+                .right-arrow {
+                    margin-right: 25px;
+                }
+    
+            }
+            
+            .slider-bullets {
+                text-align: center;
+                
+                img {
+                    padding: 0 3px;
+                    opacity: 0.4;
+                }
+
+                .bullet-selected {
+                    opacity: 1;
+                }
+            }
+            
+        }
+
     }
-
-
-
-
-
 
     footer {
         display: flex;

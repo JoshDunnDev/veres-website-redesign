@@ -1,0 +1,130 @@
+<main>
+  <section id="about">
+    <h1>About</h1>
+    <p>
+      Veres is a credentialing platform that uses Verifiable Claims technology to digitize any credential that can be stored in a physical wallet. 
+      Veres enables more secure and efficient exchange of customer and employee credentials (ID cards, digital offers, receipts, tickets) across a 
+      wide variety of industries (government, education, healthcare, financial services). Other benefits include reduced risk and easier regulatory 
+      compliance.
+    </p>
+
+  </section>
+
+  <hr>
+
+  <section id="use-cases">
+      <h1>Use Cases</h1>
+      <div class="use-case-buttons">
+        <div (click)="changeUseCase(1)" class="use-case-button">
+          <img src="../../assets/images/Use-Case-Responder-Icon.png">
+          <h1>Emergency Responder</h1>
+        </div>
+        <div (click)="changeUseCase(2)" class="use-case-button">
+          <img src="../../assets/images/Use-Case-Airport-Icon.png">
+          <h1>Airport Security</h1>
+        </div>
+        <div (click)="changeUseCase(3)" class="use-case-button">
+          <img src="../../assets/images/Use-Case-Hazmat-Icon.png">
+          <h1>Hazmat Data Sharing</h1>
+        </div>
+        <div (click)="changeUseCase(4)" class="use-case-button">
+          <img src="../../assets/images/Use-Case-Prescription-Icon.png">
+          <h1>Verifiable Prescriptions</h1>
+        </div>
+      </div>
+
+      <comp-use-case-one *ngIf="useCase === 1"></comp-use-case-one>
+      <comp-use-case-two *ngIf="useCase === 2"></comp-use-case-two>
+      <comp-use-case-three *ngIf="useCase === 3"></comp-use-case-three>
+      <comp-use-case-four *ngIf="useCase === 4"></comp-use-case-four>
+
+  </section>
+
+  <hr>
+
+  <section id="veres-ecosystem">
+
+      <h1>Veres Ecosystem</h1>
+      <img src="../../assets/images/Veres-Ecosystem-Diagram-Cropped-for-Website.png" class="veres-ecosystem-cycle">
+      <div class="veres-ecosystem-buttons">
+        <div (click)="changeEcosystem(1)" class="veres-ecosystem-button">
+          <img src="../../assets/images/Veres-Ecosystem-Issuer-Icon.png">
+          <h1>Issuer</h1>
+        </div>
+        <div (click)="changeEcosystem(2)" class="veres-ecosystem-button">
+          <img src="../../assets/images/Veres-Ecosystem-Ledger-Icon.png">
+          <h1>Ledger</h1>
+        </div>
+        <div (click)="changeEcosystem(3)" class="veres-ecosystem-button">
+          <img src="../../assets/images/Veres-Ecosystem-Verifier-Icon.png">
+          <h1>Verifier</h1>
+        </div>
+        <div (click)="changeEcosystem(4)" class="veres-ecosystem-button">
+          <img src="../../assets/images/Veres-Ecosystem-Wallet-Icon.png">
+          <h1>Wallet</h1>
+        </div>
+      </div>
+
+      <comp-ecosystem-one *ngIf="ecosystem === 1"></comp-ecosystem-one>
+      <comp-ecosystem-two *ngIf="ecosystem === 2"></comp-ecosystem-two>
+      <comp-ecosystem-three *ngIf="ecosystem === 3"></comp-ecosystem-three>
+      <comp-ecosystem-four *ngIf="ecosystem === 4"></comp-ecosystem-four>
+
+  </section>
+
+  <hr>
+
+  <section id="media-mentions">
+
+      <h1>Media Mentions</h1>
+      <div class="media-logos">
+        <div class="media-logo">
+          <img src="../../assets/images/ST-LogoBW.png">
+        </div>
+        <div class="media-logo">
+          <img src="../../assets/images/coindeskLogoBW.png">
+        </div>
+        <div class="media-logo">
+          <img src="../../assets/images/ConnexuslogoBW.png">
+        </div>
+        <div class="media-logo">
+          <img src="../../assets/images/eestoniaLogoBW-1-1.png">
+        </div>
+        <div class="media-logo">
+          <img src="../../assets/images/IEEE-Spectrum.HorizontalLogoBW.png">
+        </div>
+        <div class="media-logo">
+          <img src="../../assets/images/RuetersLogo.png" class="reuters-logo">
+        </div>      
+      </div>
+
+  </section>
+  <section id="slider">
+    <div class="slides">
+      <div class="left-arrow">
+        <img src="../../assets/images/left-arrow.png">
+      </div>
+      <div class="slider-main">
+        <div class="slider-image">
+          <img src="../../assets/images/Illustrated-Phone-BlockchainDropShad.png">
+        </div>
+        <div class="slider-content">
+            <h1>Veres Delta</h1>
+            <p>
+                Quickly launch a fit-for-purpose blockchain optimized for your application.
+            </p>
+            <a href="https://delta.veres.io/" target="_blank"><button>Go To Site</button></a>
+        </div>
+      </div>
+      <div class="right-arrow">
+        <img src="../../assets/images/right-arrow.png">
+      </div>
+    </div>
+    <div class="slider-bullets">
+      <img src="../../assets/images/slider-bullet.png" class="bullet-selected">
+      <img src="../../assets/images/slider-bullet.png">
+      <img src="../../assets/images/slider-bullet.png">
+    </div>
+
+  </section>
+</main>

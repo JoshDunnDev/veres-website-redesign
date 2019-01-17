@@ -2,7 +2,15 @@ $colors: (
     title-text: #05292C,
     main-text: #576E71,
     main-color: #0E8590,
-    line-color: #D8D8D8
+    line-color: #D8D8D8,
+    slide-one-bg-color: rgb(197, 202, 233),
+    slide-two-bg-color: rgb(255, 224, 178),
+    slide-three-bg-color: rgb(224, 242, 241),
+    slide-one-text-color: #1A237E
 );
 
 $box-shadow-settings: 0px 3px 6px rgba(0,0,0,0.1);
+
+$desktop-width: 1024px;
+$tablet-width: 767px;
+$mobile-width: 320px;
