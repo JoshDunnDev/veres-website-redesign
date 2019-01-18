@@ -1,11 +1,8 @@
 <main>
   <section id="about">
-    <h1>About</h1>
+    <h1>{{ content.sectionOne.title }}</h1>
     <p>
-      Veres is a credentialing platform that uses Verifiable Claims technology to digitize any credential that can be stored in a physical wallet. 
-      Veres enables more secure and efficient exchange of customer and employee credentials (ID cards, digital offers, receipts, tickets) across a 
-      wide variety of industries (government, education, healthcare, financial services). Other benefits include reduced risk and easier regulatory 
-      compliance.
+        {{ content.sectionOne.text }}
     </p>
 
   </section>
@@ -13,7 +10,7 @@
   <hr>
 
   <section id="use-cases">
-      <h1>Use Cases</h1>
+      <h1>{{ content.sectionTwo.title }}</h1>
       <div class="use-case-buttons">
         <div (click)="changeUseCase(1)" class="use-case-button">
           <img src="../../assets/images/Use-Case-Responder-Icon.png">
@@ -44,7 +41,7 @@
 
   <section id="veres-ecosystem">
 
-      <h1>Veres Ecosystem</h1>
+      <h1>{{ content.sectionThree.title }}</h1>
       <img src="../../assets/images/Veres-Ecosystem-Diagram-Cropped-for-Website.png" class="veres-ecosystem-cycle">
       <div class="veres-ecosystem-buttons">
         <div (click)="changeEcosystem(1)" class="veres-ecosystem-button">
