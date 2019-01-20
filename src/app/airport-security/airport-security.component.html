@@ -1,0 +1,116 @@
+<main>
+    <section id="use-cases">
+      <h1>{{ content.sectionOne.sectionTitle }}</h1>
+      <div class="use-case-buttons">
+        <div routerLink="/emergency-responder" class="use-case-button">
+          <img src="../../assets/images/Use-Case-Responder-Icon.png">
+          <h1>Emergency Responder</h1>
+        </div>
+        <div routerLink="/airport-security" class="use-case-button">
+          <img src="../../assets/images/Use-Case-Airport-Icon.png">
+          <h1>Airport Security</h1>
+        </div>
+        <div routerLink="/hazmat-data-sharing" class="use-case-button">
+          <img src="../../assets/images/Use-Case-Hazmat-Icon.png">
+          <h1>Hazmat Data Sharing</h1>
+        </div>
+        <div routerLink="/verifiable-prescriptions" class="use-case-button">
+          <img src="../../assets/images/Use-Case-Prescription-Icon.png">
+          <h1>Verifiable Prescriptions</h1>
+        </div>
+      </div>
+    
+      <div class="use-case-box">
+        <div class="use-case-track">
+          <hr>
+          <hr class="use-case-selected">
+          <hr>
+          <hr>
+        </div>
+        <div class="use-case-content">
+          <h1>{{ content.sectionOne.mainTitle }}</h1>
+          <div class="use-case-info">
+  
+            <div class="info-section-one">
+              <div class="use-case-icon-lg">
+                <img src="{{ content.sectionOne.mainIcon }}">
+              </div>
+              <div class="info-section-one-text">
+                <h2>{{ content.sectionOne.subTitleOne }}</h2>
+                <p>
+                    {{ content.sectionOne.textAreaOne.pOne }}
+                </p>
+              </div>
+            </div> 
+
+            <p class="extra-paragraph">
+                {{ content.sectionOne.textAreaOne.pTwo }}
+            </p>
+  
+            <div class="info-section-two">
+              <h2>{{ content.sectionOne.subTitleTwo }}</h2>
+              <p>
+                  {{ content.sectionOne.textAreaTwo }}
+              </p>
+            </div>
+  
+            <div class="info-section-three">
+              <div class="diagram">
+                <img src="{{ content.sectionOne.imageOne }}">
+              </div>
+              <div class="diagram-text">
+                <p *ngFor="let item of content.sectionOne.textAreaThree">
+                    {{ item.p }}
+                </p>
+              </div>
+            </div> 
+  
+          </div>
+        </div>
+      </div>
+    
+    </section>
+  
+    <hr>
+  
+    <section id="why-choose-veres">
+      <h1>{{ content.sectionTwo.title }}</h1>
+  
+      <div class="reason-cards">
+        <div *ngFor="let card of content.sectionTwo.card" class="reason-card two-column">
+          <div class="reason-icon">
+            <img src="{{ card.icon }}">
+          </div>
+          <h2>{{ card.title }}</h2>
+          <p *ngFor="let p of card.p">
+            {{p.text}}
+          </p>
+        </div>
+      </div>
+  
+  
+  
+    </section>
+  
+    <hr>
+  
+    <section id="benefits">
+        <div class="reason-cards">
+            <div *ngFor="let card of content.sectionThree.card" class="reason-card two-column">
+              <div *ngIf="card.icon" class="reason-icon">
+                <img src="{{card.icon}}">
+              </div>
+              <h2>{{card.title}}</h2>
+              <ul *ngIf="card.bullets">
+                <li *ngFor="let bullet of card.bullets">{{ bullet.item }}</li>
+              </ul>
+              <p *ngIf="!card.bullets">
+                  {{card.p}}
+              </p>
+            </div>
+          </div>
+    </section>
+  
+  
+  </main>
+  

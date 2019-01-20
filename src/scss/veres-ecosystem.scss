@@ -16,7 +16,7 @@
     }
 }
 
-#use-cases {
+#veres-ecosystem {
 
     h1 {
         padding-top: 72px;
@@ -26,9 +26,9 @@
         }
     }
 
-    .use-case-box {
+    .veres-ecosystem-box {
 
-        .use-case-content {
+        .veres-ecosystem-content {
             display: flex;
             flex-direction: column;
             padding: 50px;
@@ -50,7 +50,25 @@
                 }
             }
 
-            .use-case-info {
+            .veres-ecosystem-main-text {
+                max-width: 700px;
+            }
+
+            .main-image {
+                padding: 25px 0;
+
+                img {
+                    width: 370px;
+                    height: auto;
+
+                    @include mobile {
+                        width: 320px;
+                        height: auto;
+                    }
+                }
+            }
+
+            .veres-ecosystem-info {
                 width: 100%;
 
                 h2 {
@@ -62,22 +80,29 @@
 
                 }
 
-                .info-section-one {
+                .info-section-one,
+                .info-section-two {
                     display: flex;
                     justify-content: center;
                     align-items: center;
 
-                    .use-case-icon-lg {
+                    .veres-ecosystem-icon-lg {
                         padding-right: 40px;
                         width: auto;
 
                         img{
                             height: 180px;
                             width: auto;
+
+                            @include tablet {
+                                height: auto;
+                                width: 150px;
+                            }
                         }
                     }
 
-                    .info-section-one-text {
+                    .info-section-one-text,
+                    .info-section-two-text {
 
                         h2 {
                             @include mobile {
@@ -100,91 +125,66 @@
 
                 }
 
+                .info-section-two {
+                    margin-top: 50px;
+                }
+
                 .extra-paragraph {
                     max-width: 725px;
                     margin: 1.6em auto auto;
                 }
 
-                .info-section-two {
-                    padding: 50px 0;
-                    text-align: center;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-
-                    @include mobile {
-                        padding: 25px 0;
-                    }
-
-                    p {
-                        max-width: 450px;
-                    }
-
-                }
-
-                .info-section-two-title {
-                    padding: 50px 0 10px;
-                    text-align: center;
-
-                    @include mobile {
-                        padding: 25px 0 10px;
-                    }
-                }
-
                 .info-section-three {
                     display: flex;
                     align-items: center;
+                    flex-direction: column;
+                    margin-top: 50px;
 
-                    @include mobile {
-                        flex-direction: column;
+                    h2 {
+                        text-align: center;
                     }
                     
-                    .diagram {
-                        padding-right: 50px;
-                        text-align: center;
-
+                    .use-case-examples {
                         @include tablet {
-                            width: 50%;
+                            display: none;
                         }
 
                         @include mobile {
-                            padding-right: 0;
-                            margin-bottom: 1.6em;
+                            display: none;
                         }
 
                         img {
-                            width: 450px; 
+                            width: 1020px;
                             height: auto;
-
-                            @include tablet {
-                                width: 350px;
-                            }
-
-                            @include mobile {
-                                width: 300px;
-                            }
+    
                         }
                     }
 
-                    .diagram-text {
-                        width: 450px;
+                    .use-case-examples-mobile {
+                        display: none;
 
                         @include tablet {
-                            width: 50%;
+                            display: block;
                         }
 
                         @include mobile {
-                            width: 100%;
+                            display: block;
                         }
 
-                        p {
-                            margin-bottom: 1.6em;
-                        }
+                        img {
+                            @include tablet {
+                                width: 700px;
+                                height: auto;
+                            }
 
-                        p:last-child  {
-                            margin-bottom: auto;
+                            @include mobile {
+                                width: 320px;
+                                height: auto;
+                            }
+    
                         }
                     }
+
                 }
                 
             }
@@ -192,10 +192,31 @@
     }
 }
 
-#why-choose-veres,
-#benefits {
+#veres-ecosystem {
+    .extra-padding {
+        padding-right: 100px !important;
+
+        @include tablet {
+            padding-right: 40px !important;
+        }
+    }
+
+    .info-section-two-text {
+        margin-right: 48px;
+
+        @include tablet {
+            margin-right: 0;
+        }
+
+        @include mobile {
+            margin-right: 0;
+        }
+    }
+}
+
+#why-choose-veres {
     max-width: $desktop-width;
-    margin: auto;
+    margin: auto auto 72px auto;
 
     h1 {
         text-align: center;
@@ -212,6 +233,7 @@
     .reason-cards {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
 
         @include mobile {
             flex-direction: column;
@@ -338,88 +360,6 @@
     .three-column:last-child p {
         @include mobile {
             padding-bottom: 0 !important;
-        }
-    }
-}
-
-#benefits {
-    padding-bottom: 72px;
-
-    @include mobile {
-        padding-bottom: 25px;
-    }
-
-    .three-column:nth-child(2) {
-        flex-direction: row !important;
-
-        @include tablet {
-            flex-direction: column !important;
-            justify-content: center;
-        }
-
-        @include mobile {
-            flex-direction: column !important;
-            justify-content: center;
-        }
-
-        p {
-            @include tablet {
-                padding-bottom: 0 !important;
-            }
-
-            @include mobile {
-                text-align: center;
-                padding: 0 50px 25px 50px;
-            }
-        }
-
-        .reason-icon {
-            padding-right: 25px;
-
-            @include tablet {
-                padding-right: 0;
-            }
-
-            @include mobile {
-                padding-right: 0;
-                padding-bottom: 10px !important;
-            }
-
-            img {
-                height: 120px;
-                width: auto;
-
-                @include tablet {
-                    height: 100px;
-                }
-            }
-        }
-
-        p {
-            @include tablet {
-                text-align: center;
-            }
-        }
-    }
-
-    ul {
-        @include mobile {
-            width: 225px;
-        }
-    }
-
-    .two-column {
-        width: calc(50% - 50px) !important;
-        padding: 0 25px !important;
-
-        @include tablet {
-            width: calc(50% - 20px) !important;
-            padding: 0 10px !important;
-        }
-
-        @include mobile {
-            width: 100% !important;
-            padding: 0 !important;
         }
     }
 }

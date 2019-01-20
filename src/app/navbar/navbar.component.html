@@ -1,27 +1,27 @@
 <header>
   <nav>
-    <a routerLink="/" id="logo"><img src="../assets/images/Veres-Logo-Remake-72dpi4444.png" ></a>
+    <a routerLink="/" (click)="toggleNav = false" id="logo"><img src="../assets/images/Veres-Logo-Remake-72dpi4444.png" ></a>
     <div id="nav-links" [ngClass]="{'show-nav': toggleNav, 'hide-nav': !toggleNav}">
-      <a routerLink="/" routerLinkActive="nav-selected" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">About</a>
+      <a routerLink="/" (click)="toggleNav = false" routerLinkActive="nav-selected" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">About</a>
       <div class="nav-link">
         <a class="dropdown-toggle">Use Cases</a>
         <div class="dropdown-menu">
-          <a routerLink="/emergency-responder" routerLinkActive="nav-selected" class="dropdown-item">Emergency Responder</a>
-          <a routerLink="/airport-security" routerLinkActive="nav-selected" class="dropdown-item">Airport Security</a>
-          <a routerLink="/hazmat-data-sharing" routerLinkActive="nav-selected" class="dropdown-item">Hazmat Data Sharing</a>
-          <a routerLink="/verifiable-prescriptions" routerLinkActive="nav-selected" class="dropdown-item">Verifiable Prescriptions</a>
+          <a routerLink="/emergency-responder" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Emergency Responder</a>
+          <a routerLink="/airport-security" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Airport Security</a>
+          <a routerLink="/hazmat-data-sharing" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Hazmat Data Sharing</a>
+          <a routerLink="/verifiable-prescriptions" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Verifiable Prescriptions</a>
         </div>
       </div>
       <div class="nav-link" >
         <a class="dropdown-toggle">Ecosystem</a>
         <div class="dropdown-menu">
-          <a routerLink="/issuer" routerLinkActive="nav-selected" class="dropdown-item">Issuer</a>
-          <a routerLink="/ledger" routerLinkActive="nav-selected" class="dropdown-item">Ledger</a>
-          <a routerLink="/verifier" routerLinkActive="nav-selected" class="dropdown-item">Verifier</a>
-          <a routerLink="/wallet" routerLinkActive="nav-selected" class="dropdown-item">Wallet</a>
+          <a routerLink="/issuer" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Issuer</a>
+          <a routerLink="/ledger" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Ledger</a>
+          <a routerLink="/verifier" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Verifier</a>
+          <a routerLink="/wallet" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Wallet</a>
         </div>
       </div>
-      <a routerLink="/contact" routerLinkActive="nav-selected" class="nav-link">Contact</a>
+      <a routerLink="/contact" (click)="toggleNav = false" routerLinkActive="nav-selected" class="nav-link">Contact</a>
     </div>
     <img src="../assets/images/hamburger-menu-icon.png" (click)="toggleNav = !toggleNav" class="hamburger-menu-button">
   </nav>

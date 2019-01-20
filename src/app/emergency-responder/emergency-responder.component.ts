@@ -9,7 +9,7 @@ export class EmergencyResponderComponent implements OnInit {
 
   content = {
     sectionOne: {
-      sectionTitle: 'Use Case',
+      sectionTitle: 'Use Cases',
       mainTitle: 'Emergency Responder Credential Verification',
       mainIcon: '../../assets/images/Use-Case-Responder-Icon.png',
       subTitleOne: `What's the Problem?`,

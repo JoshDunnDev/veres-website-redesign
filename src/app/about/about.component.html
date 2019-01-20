@@ -96,32 +96,93 @@
       </div>
 
   </section>
-  <section id="slider">
-    <div class="slides">
-      <div class="left-arrow">
-        <img src="../../assets/images/left-arrow.png">
-      </div>
-      <div class="slider-main">
-        <div class="slider-image">
-          <img src="../../assets/images/Illustrated-Phone-BlockchainDropShad.png">
+  <section id="slider" (mouseenter)="toggleArrow = true" (mouseleave)="toggleArrow = false">
+      <div [hidden]="slide != 1" id="slider-one">
+        <div class="slides">
+          <div (click)="previousSlide()" class="left-arrow" [ngClass]="{'show-arrow': toggleArrow, 'hide-arrow': !toggleArrow}">
+            <img src="../../assets/images/left-arrow.png">
+          </div>
+          <div class="slider-main">
+            <div class="slider-image fadeInLeft">
+              <img src="../../assets/images/Illustrated-Phone-BlockchainDropShad.png">
+            </div>
+            <div class="slider-content fadeInBottom">
+                <h1>Veres Delta</h1>
+                <p>
+                    Quickly launch a fit-for-purpose blockchain optimized for your application.
+                </p>
+                <a href="https://delta.veres.io/" target="_blank"><button>Go To Site</button></a>
+            </div>
+          </div>
+          <div (click)="nextSlide()" class="right-arrow" [ngClass]="{'show-arrow': toggleArrow, 'hide-arrow': !toggleArrow}">
+            <img src="../../assets/images/right-arrow.png">
+          </div>
         </div>
-        <div class="slider-content">
-            <h1>Veres Delta</h1>
-            <p>
-                Quickly launch a fit-for-purpose blockchain optimized for your application.
-            </p>
-            <a href="https://delta.veres.io/" target="_blank"><button>Go To Site</button></a>
+        <div class="slider-bullets">
+          <img src="../../assets/images/slider-bullet.png" class="bullet-selected">
+          <img src="../../assets/images/slider-bullet.png">
+          <img src="../../assets/images/slider-bullet.png">
         </div>
+    
       </div>
-      <div class="right-arrow">
-        <img src="../../assets/images/right-arrow.png">
+      <div [hidden]="slide != 2" id="slider-two">
+        <div class="slides">
+          <div (click)="previousSlide()" class="left-arrow" [ngClass]="{'show-arrow': toggleArrow, 'hide-arrow': !toggleArrow}">
+            <img src="../../assets/images/left-arrow.png">
+          </div>
+          <div class="slider-main">
+            <div class="slider-image fadeInLeft">
+              <img src="../../assets/images/Illustrated-Phone-Digital-Wallet.png">
+            </div>
+            <div class="slider-content fadeInBottom">
+                <h1>Veres Wallet</h1>
+                <p>
+                    Conveniently and securely access your cloud based digital wallet from any device.
+                </p>
+                <a href="https://demo.wallet.veres.io/" target="_blank"><button>Go To Site</button></a>
+            </div>
+          </div>
+          <div (click)="nextSlide()" class="right-arrow" [ngClass]="{'show-arrow': toggleArrow, 'hide-arrow': !toggleArrow}">
+            <img src="../../assets/images/right-arrow.png">
+          </div>
+        </div>
+        <div class="slider-bullets">
+          <img src="../../assets/images/slider-bullet.png">
+          <img src="../../assets/images/slider-bullet.png" class="bullet-selected">
+          <img src="../../assets/images/slider-bullet.png">
+        </div>
+    
       </div>
-    </div>
-    <div class="slider-bullets">
-      <img src="../../assets/images/slider-bullet.png" class="bullet-selected">
-      <img src="../../assets/images/slider-bullet.png">
-      <img src="../../assets/images/slider-bullet.png">
-    </div>
+      <div [hidden]="slide != 3" id="slider-three">
+        <div class="slides">
+          <div (click)="previousSlide()" class="left-arrow" [ngClass]="{'show-arrow': toggleArrow, 'hide-arrow': !toggleArrow}">
+            <img src="../../assets/images/left-arrow.png">
+          </div>
+          <div class="slider-main">
+            <div class="slider-image fadeInLeft">
+              <img src="../../assets/images/Illustrated-Phone-Loyalty-Card-2-DropShad2.png">
+            </div>
+            <div class="slider-content fadeInBottom">
+                <h1>Veres Loyalty</h1>
+                <p>
+                    Build customer relationships with digital loyalty cards 
+                </p>
+                <a href="https://demo.checkpoint.veres.io/loyalty" target="_blank"><button>Go To Site</button></a>
+            </div>
+          </div>
+          <div (click)="nextSlide()" class="right-arrow" [ngClass]="{'show-arrow': toggleArrow, 'hide-arrow': !toggleArrow}">
+            <img src="../../assets/images/right-arrow.png">
+          </div>
+        </div>
+        <div class="slider-bullets">
+          <img src="../../assets/images/slider-bullet.png">
+          <img src="../../assets/images/slider-bullet.png">
+          <img src="../../assets/images/slider-bullet.png" class="bullet-selected">
+        </div>
+    
+      </div>
 
   </section>
+
+
 </main>

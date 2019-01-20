@@ -1,0 +1,100 @@
+<main>
+    <section id="veres-ecosystem">
+      <h1>{{ content.sectionOne.sectionTitle }}</h1>
+      <div class="veres-ecosystem-buttons">
+        <div routerLink="/issuer" class="veres-ecosystem-button">
+          <img src="../../assets/images/Veres-Ecosystem-Issuer-Icon.png">
+          <h1>Issuer</h1>
+        </div>
+        <div routerLink="/ledger" class="veres-ecosystem-button">
+          <img src="../../assets/images/Veres-Ecosystem-Ledger-Icon.png">
+          <h1>Ledger</h1>
+        </div>
+        <div routerLink="/verifier" class="veres-ecosystem-button">
+          <img src="../../assets/images/Veres-Ecosystem-Verifier-Icon.png">
+          <h1>Verifier</h1>
+        </div>
+        <div routerLink="/wallet" class="veres-ecosystem-button">
+          <img src="../../assets/images/Veres-Ecosystem-Wallet-Icon.png">
+          <h1>Wallet</h1>
+        </div>
+      </div>
+    
+      <div class="veres-ecosystem-box">
+        <div class="veres-ecosystem-track">
+          <hr class="veres-ecosystem-selected">
+          <hr>
+          <hr>
+          <hr>
+        </div>
+        <div class="veres-ecosystem-content">
+          <h1>{{ content.sectionOne.mainTitle }}</h1>
+          <p *ngFor="let text of content.sectionOne.mainText" class="veres-ecosystem-main-text">{{ text.p }}</p>
+          <div class="main-image">
+            <img src="{{ content.sectionOne.mainImage }}">
+          </div>
+          <div class="veres-ecosystem-info">
+            <div class="info-section-one">
+              <div class="veres-ecosystem-icon-lg extra-padding">
+                <img src="{{ content.sectionOne.subImageOne }}">
+              </div>
+              <div class="info-section-one-text">
+                <h2>{{ content.sectionOne.subTitleOne }}</h2>
+                <p *ngFor="let text of content.sectionOne.textAreaOne ">
+                    {{ text.p }}
+                </p>
+              </div>
+            </div> 
+  
+            <div class="info-section-two">
+              <div class="veres-ecosystem-icon-lg">
+                <img src="{{ content.sectionOne.subImageTwo }}">
+              </div>
+              <div class="info-section-two-text">
+                <h2>{{ content.sectionOne.subTitleTwo }}</h2>
+                <p *ngFor="let text of content.sectionOne.textAreaTwo ">
+                    {{ text.p }}
+                </p>
+              </div>
+            </div> 
+  
+            <div class="info-section-three">
+              <h2>{{ content.sectionOne.subTitleThree }}</h2>
+              <div class="use-case-examples">
+                <img src="{{ content.sectionOne.subImageThree }}">
+              </div>
+              <div class="use-case-examples-mobile">
+                <img src="{{ content.sectionOne.subImageThreeMobile }}">
+              </div>
+            </div> 
+  
+          </div>
+        </div>
+      </div>
+    
+    </section>
+  
+    <hr>
+  
+    <section id="why-choose-veres">
+      <h1>{{ content.sectionTwo.title }}</h1>
+  
+      <div class="reason-cards">
+        <div *ngFor="let card of content.sectionTwo.card" class="reason-card three-column">
+          <div class="reason-icon">
+            <img src="{{ card.icon }}">
+          </div>
+          <h2>{{ card.title }}</h2>
+          <p *ngFor="let p of card.p">
+            {{p.text}}
+          </p>
+        </div>
+      </div>
+  
+  
+  
+    </section>
+  
+  
+  </main>
+  

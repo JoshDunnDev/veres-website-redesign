@@ -1,0 +1,203 @@
+@import '../../scss/_vars';
+
+@function colors($color-name) {
+    @return map-get($colors, $color-name );
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+::placeholder {
+    color: colors(main-text);
+    opacity: .7;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 72px;
+
+    @include tablet {
+        padding: 72px 25px 0;
+    }
+
+    @include mobile {
+        padding: 0 25px;
+        border-top: 1px solid colors(line-color);
+    }
+
+    #contact-info {
+        padding-bottom: 25px;
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: colors(title-text);
+            padding: 72px 0 25px;
+            margin: 0;
+
+            @include mobile {
+                padding: 25px 0 25px;
+                font-size: 26px;
+            }
+        }
+
+        .company-info {
+            display: flex;
+
+            @include mobile {
+                flex-direction: column;
+            }
+
+            .company-info-text {
+                max-width: 450px;
+                padding-right: 50px;
+
+                @include mobile {
+                    padding-right: 0;
+                }
+
+                p:first-child {
+                    padding-bottom: 1.6em;
+                }
+
+                p {
+                    a {
+                        color: colors(main-color);
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .location-map {
+                @include mobile {
+                    padding-top: 25px;
+                    margin: auto;
+                }
+
+                img{
+                    width: 300px;
+                    height: 300px;
+
+                    @include mobile {
+                        width: 275px;
+                        height: 275px;
+                    }
+                }
+            }
+        }
+    }
+
+    #contact-form {
+        padding-bottom: 25px;
+
+        .input-line-one,
+        .input-line-two,
+        .input-line-three {
+            width: 100%;
+
+            input,
+            textarea {
+                padding: 20px 0 20px 20px;
+                margin: 0;
+                font-size: 16px;
+                font-weight: 500;
+                color: colors(main-text);
+                border-radius: 5px;
+                border: 1px solid colors(line-color);
+
+                @include mobile {
+                    padding: 15px 0 15px 15px;
+                }
+            }
+        }
+
+        .input-line-one {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 25px;
+
+            @include mobile {
+                flex-direction: column;
+                padding-bottom: 15px;
+            }
+
+            input {
+                width: calc(50% - 36px);
+
+                @include mobile {
+                    width: calc(100% - 16px);
+                }
+            }
+
+            input:first-child {
+                @include mobile {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .input-line-two {
+            display: flex;
+            padding-bottom: 25px;
+
+            @include mobile {
+                padding-bottom: 15px;
+            }
+            
+            input {
+                width: 100%;
+            }
+        }
+
+        .input-line-three {
+            display: flex;
+            
+            textarea {
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+        .submit-button {
+            button {
+                background-color: colors(main-color);
+                color: #fff;
+                border-radius: 55px;
+                width: 100%;
+                height: 55px;
+                text-transform: uppercase;
+                font-size: 16px;
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-weight: 500;
+                margin-top: 25px;
+                cursor: pointer;
+                border: none;
+            }
+
+            button:disabled {
+                background-color: colors(line-color);
+                cursor: default;
+            }
+        }
+
+        .submitted-message {
+            margin-top: 25px;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            background-color: colors(main-color);
+            border-radius: 5px;
+        }
+    }
+}

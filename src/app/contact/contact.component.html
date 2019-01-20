@@ -1,3 +1,39 @@
-<p>
-  contact works!
-</p>
+<main>
+  <section id="contact-info">
+      <h1>Contact Us</h1>
+      <div class="company-info">
+        <div class="company-info-text">
+          <p>You may reach us by phone during normal business hours – Monday through Friday, 9am to 5pm Eastern Standard Time or by e-mail anytime.</p>
+          <p>
+            Phone: 1-540-961-4469
+            <br>
+            Sales: <a href="mailto:sales@digitalbazaar.com">sales@digitalbazaar.com</a>
+            <br>
+            Support: <a href="mailto:support@digitalbazaar.com">support@digitalbazaar.com</a>
+            <br>
+            Press: <a href="mailto:press@digitalbazaar.com">press@digitalbazaar.com</a>
+          </p>
+        </div>
+        <div class="location-map">
+          <img src="../../assets/images/Digital-Bazaar-Map.png">
+        </div>
+      </div>
+  </section>
+  <form [formGroup]="form" (ngSubmit)="submit(form)" id="contact-form">
+    <div class="input-line-one form-group">
+      <input required formControlName="name" name="name" type="text" placeholder="Name">
+      <input required formControlName="email" name="email" type="text" placeholder="Email">
+    </div>
+    <div class="input-line-two form-group">
+      <input formControlName="company" name="company" type="text" placeholder="Company (Optional)">
+    </div>
+    <div class="input-line-three form-group">
+      <textarea required formControlName="message" name="message" type="text" placeholder="Message"></textarea>
+    </div>
+    <div *ngIf="submitted" class="submitted-message">Message has been sent.</div>
+    <div class="submit-button">
+      <button [disabled]="!form.valid">Submit</button>
+    </div>
+    
+  </form>
+</main>

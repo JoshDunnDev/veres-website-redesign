@@ -1,0 +1,117 @@
+@import '../../scss/_vars';
+
+@function colors($color-name) {
+    @return map-get($colors, $color-name );
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+.veres-ecosystem-content {
+    .main-image {
+
+        img{
+            width: 615px !important;
+
+            @include mobile {
+                width: 300px !important;
+            }
+        }
+    }
+
+    .veres-ecosystem-info {
+        h2 {
+            text-align: center;
+            width: 70%;
+            margin: auto !important;
+
+            @include tablet {
+                width: 80%;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        .info-section-one,
+        .info-section-two,
+        .info-section-three {
+            @include mobile {
+                display: flex !important;
+                flex-direction: column !important;
+                margin-top: 25px !important;
+            }
+
+            .veres-ecosystem-icon-lg {
+                width: auto !important;
+                padding-right: 40px !important;
+
+                @include mobile {
+                    display: block !important;
+                    padding-right: 0 !important;
+                    padding-bottom: 25px;
+                }
+
+                img {
+                    width: 360px !important;
+                    height: auto !important;
+
+                    @include mobile {
+                        width: 300px !important;
+                        height: auto !important;
+                    }
+                }
+            }
+
+            p {
+                @include mobile {
+                    text-align: left !important;
+                }
+            }
+        }
+
+        .info-section-two-text {
+            margin-right: 0 !important;
+        }
+
+        .info-section-three {
+            flex-direction: row !important;
+            justify-content: center !important;
+
+            @include mobile {
+                flex-direction: column !important;
+            }
+
+            .info-section-three-text {
+                
+                p {
+                    max-width: 450px;
+                }
+            }
+        }
+    }
+
+
+}
+
+#why-choose-veres {
+    h1 {
+        margin: 0;
+    }
+    
+    .header-text {
+        max-width: 515px;
+        text-align: center;
+        margin: auto auto 25px;
+    }
+}

@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  public toggleArrow = false;
   useCase = 1;
   ecosystem = 1;
+  slide = 1;
 
   content = {
     sectionOne: {
@@ -33,6 +35,9 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    setInterval(()=>{
+      this.nextSlide();
+    }, 5000);
   }
 
   changeUseCase(val) {
@@ -41,6 +46,28 @@ export class AboutComponent implements OnInit {
 
   changeEcosystem(val) {
     this.ecosystem = val;
+  }
+
+  nextSlide() {
+    if(this.slide < 3)
+      this.slide ++;
+    else
+      this.slide = 1;
+  }
+
+  previousSlide() {
+    if(this.slide > 1)
+      this.slide --;
+    else
+      this.slide = 3;
+  }
+
+  showArrows() {
+    console.log('Show')
+  }
+
+  removeArrows() {
+    console.log('Remove')
   }
 
 }

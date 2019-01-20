@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -17,6 +17,13 @@ import { EcosystemThreeComponent } from './ecosystem-three/ecosystem-three.compo
 import { EcosystemFourComponent } from './ecosystem-four/ecosystem-four.component';
 import { EmergencyResponderComponent } from './emergency-responder/emergency-responder.component';
 import { ContactComponent } from './contact/contact.component';
+import { AirportSecurityComponent } from './airport-security/airport-security.component';
+import { HazmatDataSharingComponent } from './hazmat-data-sharing/hazmat-data-sharing.component';
+import { VerifiablePrescriptionsComponent } from './verifiable-prescriptions/verifiable-prescriptions.component';
+import { IssuerComponent } from './issuer/issuer.component';
+import { VerifierComponent } from './verifier/verifier.component';
+import { LedgerComponent } from './ledger/ledger.component';
+import { WalletComponent } from './wallet/wallet.component';
 
 @NgModule({
   declarations: [
@@ -34,10 +41,19 @@ import { ContactComponent } from './contact/contact.component';
     EcosystemFourComponent,
     EmergencyResponderComponent,
     ContactComponent,
+    AirportSecurityComponent,
+    HazmatDataSharingComponent,
+    VerifiablePrescriptionsComponent,
+    IssuerComponent,
+    VerifierComponent,
+    LedgerComponent,
+    WalletComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -46,6 +62,34 @@ import { ContactComponent } from './contact/contact.component';
       {
         path: 'emergency-responder',
         component: EmergencyResponderComponent
+      },
+      {
+        path: 'airport-security',
+        component: AirportSecurityComponent
+      },
+      {
+        path: 'hazmat-data-sharing',
+        component: HazmatDataSharingComponent
+      },
+      {
+        path: 'verifiable-prescriptions',
+        component: VerifiablePrescriptionsComponent
+      },
+      {
+        path: 'issuer',
+        component: IssuerComponent
+      },
+      {
+        path: 'ledger',
+        component: LedgerComponent
+      },
+      {
+        path: 'verifier',
+        component: VerifierComponent
+      },
+      {
+        path: 'wallet',
+        component: WalletComponent
       },
       {
         path: 'contact',
