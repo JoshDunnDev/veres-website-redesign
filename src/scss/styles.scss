@@ -207,6 +207,9 @@ body {
 
                 .show-use-cases,
                 .show-eco {
+                    @include tablet {
+                        display: flex !important;
+                    }
                     @include mobile {
                         display: flex !important;
                     }
@@ -214,6 +217,10 @@ body {
 
                 .hide-use-cases,
                 .hide-eco {
+                    @include tablet {
+                        display: none !important;
+                    }
+
                     @include mobile {
                         display: none !important;
                     }
@@ -926,6 +933,10 @@ body {
 
                 .hide-arrow {
                     display: none;
+
+                    @include tablet {
+                        display: block;
+                    }
 
                     @include mobile {
                         display: block;
