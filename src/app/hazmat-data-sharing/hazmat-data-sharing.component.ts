@@ -11,7 +11,7 @@ export class HazmatDataSharingComponent implements OnInit {
     sectionOne: {
       sectionTitle: 'Use Cases',
       mainTitle: 'Hazmat Data Sharing',
-      mainIcon: '../../assets/images/Use-Case-Hazmat-Icon.png',
+      mainIcon: 'assets/images/Use-Case-Hazmat-Icon.png',
       subTitleOne: `What's the Problem?`,
       textAreaOne: [
         {
@@ -26,7 +26,7 @@ export class HazmatDataSharingComponent implements OnInit {
         }],
       subTitleTwo: 'Use Case Flow',
       textAreaTwo: '',
-      imageOne: '../../assets/images/Hazmat-Data-Sharing-Ecosystem-Diagram.png',
+      imageOne: 'assets/images/Hazmat-Data-Sharing-Ecosystem-Diagram.png',
       textAreaThree: [
         {
           p: `1. A property owner stores information about hazardous materials 
@@ -53,7 +53,7 @@ export class HazmatDataSharingComponent implements OnInit {
       title: 'Why Choose Veres',
       card: [
         {
-        icon: '../../assets/images/icons8-Thumbs-Up-128.png',
+        icon: 'assets/images/icons8-Thumbs-Up-128.png',
         title: 'Convenient',
         bullets: [
           {
@@ -67,7 +67,7 @@ export class HazmatDataSharingComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Lock-2-128.png',
+        icon: 'assets/images/icons8-Lock-2-128.png',
         title: 'Safe & Secure',
         bullets: [
           {
@@ -81,7 +81,7 @@ export class HazmatDataSharingComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Module-128.png',
+        icon: 'assets/images/icons8-Module-128.png',
         title: 'Configurable',
         bullets: [
           {

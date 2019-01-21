@@ -1,29 +1,33 @@
 <header>
   <nav>
-    <a routerLink="/" (click)="toggleNav = false" id="logo"><img src="../assets/images/Veres-Logo-Remake-72dpi4444.png" ></a>
+    <a routerLink="/" (click)="toggleNav = false; toggleEcoHover = false; toggleUseCasesHover = false" id="logo"><img src="assets/images/Veres-Logo-Remake-72dpi4444.png" ></a>
     <div id="nav-links" [ngClass]="{'show-nav': toggleNav, 'hide-nav': !toggleNav}">
-      <a routerLink="/" (click)="toggleNav = false" routerLinkActive="nav-selected" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">About</a>
+      <a routerLink="/" (click)="toggleNav = false; toggleEcoHover = false; toggleUseCasesHover = false" routerLinkActive="nav-selected" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">About</a>
       <div class="nav-link">
-        <a class="dropdown-toggle">Use Cases</a>
-        <div class="dropdown-menu">
-          <a routerLink="/emergency-responder" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Emergency Responder</a>
-          <a routerLink="/airport-security" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Airport Security</a>
-          <a routerLink="/hazmat-data-sharing" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Hazmat Data Sharing</a>
-          <a routerLink="/verifiable-prescriptions" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Verifiable Prescriptions</a>
+        <a (click)="toggleUseCasesHover = !toggleUseCasesHover" class="dropdown-toggle">Use Cases</a>
+        <div [ngClass]="{'show-use-cases': toggleUseCasesHover, 'hide-use-cases': !toggleUseCasesHover}" class="dropdown-menu">
+          <a routerLink="/emergency-responder" (click)="toggleNav = false; toggleEcoHover = false; toggleUseCasesHover = false" routerLinkActive="nav-selected" class="dropdown-item">Emergency Responder</a>
+          <a routerLink="/airport-security" (click)="toggleNav = false; toggleEcoHover = false; toggleUseCasesHover = false" routerLinkActive="nav-selected" class="dropdown-item">Airport Security</a>
+          <a routerLink="/hazmat-data-sharing" (click)="toggleNav = false; toggleEcoHover = false; toggleUseCasesHover = false" routerLinkActive="nav-selected" class="dropdown-item">Hazmat Data Sharing</a>
+          <a routerLink="/verifiable-prescriptions" (click)="toggleNav = false; toggleEcoHover = false; toggleUseCasesHover = false" routerLinkActive="nav-selected" class="dropdown-item">Verifiable Prescriptions</a>
         </div>
       </div>
       <div class="nav-link" >
-        <a class="dropdown-toggle">Ecosystem</a>
-        <div class="dropdown-menu">
-          <a routerLink="/issuer" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Issuer</a>
-          <a routerLink="/ledger" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Ledger</a>
-          <a routerLink="/verifier" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Verifier</a>
-          <a routerLink="/wallet" (click)="toggleNav = false" routerLinkActive="nav-selected" class="dropdown-item">Wallet</a>
+        <a (click)="toggleEcoHover = !toggleEcoHover" class="dropdown-toggle">Ecosystem</a>
+        <div [ngClass]="{'show-eco': toggleEcoHover, 'hide-eco': !toggleEcoHover}" class="dropdown-menu">
+          <a routerLink="/issuer" (click)="toggleNav = false; toggleEcoHover = false; toggleUseCasesHover = false" routerLinkActive="nav-selected" class="dropdown-item">Issuer</a>
+          <a routerLink="/ledger" (click)="toggleNav = false; toggleEcoHover = false; toggleUseCasesHover = false" routerLinkActive="nav-selected" class="dropdown-item">Ledger</a>
+          <a routerLink="/verifier" (click)="toggleNav = false; toggleEcoHover = false; toggleUseCasesHover = false" routerLinkActive="nav-selected" class="dropdown-item">Verifier</a>
+          <a routerLink="/wallet" (click)="toggleNav = false; toggleEcoHover = false; toggleUseCasesHover = false" routerLinkActive="nav-selected" class="dropdown-item">Wallet</a>
         </div>
       </div>
-      <a routerLink="/contact" (click)="toggleNav = false" routerLinkActive="nav-selected" class="nav-link">Contact</a>
+      <a routerLink="/contact" (click)="toggleNav = false; toggleEcoHover = false; toggleUseCasesHover = false" routerLinkActive="nav-selected" class="nav-link">Contact</a>
     </div>
-    <img src="../assets/images/hamburger-menu-icon.png" (click)="toggleNav = !toggleNav" class="hamburger-menu-button">
+    <img src="assets/images/hamburger-menu-icon.png" (click)="toggleNav = !toggleNav" class="hamburger-menu-button">
   </nav>
 
 </header>
+
+<div (click)="toTop()" [ngClass]="{'show-to-top': toggleToTop, 'hide-to-top': !toggleToTop}" class="to-top">
+  <img src="assets/images/ToTopButton.png">
+</div>

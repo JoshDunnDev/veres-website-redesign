@@ -24,9 +24,9 @@ export class WalletComponent implements OnInit {
           provider.`
         }
       ],
-      mainImage: '../../assets/images/Veres-Ecosystem-Diagram-Cropped-for-Website.png',
+      mainImage: 'assets/images/Veres-Ecosystem-Diagram-Cropped-for-Website.png',
       subTitleOne: '',
-      subImageOne: '../../assets/images/Illustrated-Phone-Digital-Wallet.png',
+      subImageOne: 'assets/images/Illustrated-Phone-Digital-Wallet.png',
       textAreaOne:
         {
           p: `Veres Wallet stores the digital version of any credential that 
@@ -69,7 +69,7 @@ export class WalletComponent implements OnInit {
       title: 'A Better Wallet',
       card: [
         {
-        icon: '../../assets/images/icons8-Lock-2-128.png',
+        icon: 'assets/images/icons8-Lock-2-128.png',
         title: 'Secure',
         p: [
           {
@@ -77,7 +77,7 @@ export class WalletComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Exit-Sign-128.png',
+        icon: 'assets/images/icons8-Exit-Sign-128.png',
         title: 'No Lock-in',
         p: [
           {
@@ -85,7 +85,7 @@ export class WalletComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Settings-Filled-128.png',
+        icon: 'assets/images/icons8-Settings-Filled-128.png',
         title: 'Control',
         p: [
           {
@@ -93,7 +93,7 @@ export class WalletComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Smartphone-Tablet-128.png',
+        icon: 'assets/images/icons8-Smartphone-Tablet-128.png',
         title: 'Any Device',
         p: [
           {
@@ -101,7 +101,7 @@ export class WalletComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Invisible-128.png',
+        icon: 'assets/images/icons8-Invisible-128.png',
         title: 'Private',
         p: [
           {
@@ -109,7 +109,7 @@ export class WalletComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/Free.png',
+        icon: 'assets/images/Free.png',
         title: 'Free Option',
         p: [
           {

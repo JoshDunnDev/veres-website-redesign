@@ -11,7 +11,7 @@ export class EmergencyResponderComponent implements OnInit {
     sectionOne: {
       sectionTitle: 'Use Cases',
       mainTitle: 'Emergency Responder Credential Verification',
-      mainIcon: '../../assets/images/Use-Case-Responder-Icon.png',
+      mainIcon: 'assets/images/Use-Case-Responder-Icon.png',
       subTitleOne: `What's the Problem?`,
       textAreaOne: `
         There is currently no fast, reliable way for checkpoint 
@@ -26,7 +26,7 @@ export class EmergencyResponderComponent implements OnInit {
         including law enforcement, emergency medical services, and the National 
         Guard. The following example pertains to fire rescue.
       `,
-      imageOne: '../../assets/images/Emergency-Responder-Ecosystem.png',
+      imageOne: 'assets/images/Emergency-Responder-Ecosystem.png',
       textAreaThree: [
         {
           p: `1. A fire station issues a digital ID card to a firefighter. 
@@ -54,7 +54,7 @@ export class EmergencyResponderComponent implements OnInit {
       title: 'Why Choose Veres',
       card: [
         {
-        icon: '../../assets/images/icons8-Thumbs-Up-128.png',
+        icon: 'assets/images/icons8-Thumbs-Up-128.png',
         title: 'Convenient',
         bullets: [
           {
@@ -68,7 +68,7 @@ export class EmergencyResponderComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Lock-2-128.png',
+        icon: 'assets/images/icons8-Lock-2-128.png',
         title: 'Safe & Secure',
         bullets: [
           {
@@ -88,7 +88,7 @@ export class EmergencyResponderComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Module-128.png',
+        icon: 'assets/images/icons8-Module-128.png',
         title: 'Configurable',
         bullets: [
           {
@@ -120,7 +120,7 @@ export class EmergencyResponderComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/Veres-Ecosystem-Issuer-Icon.png',
+        icon: 'assets/images/Veres-Ecosystem-Issuer-Icon.png',
         title: '',
         p: `The data on the digital ID card is made tamper-proof through 
             the use of advanced cryptography.`

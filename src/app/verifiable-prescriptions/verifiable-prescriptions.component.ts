@@ -11,7 +11,7 @@ export class VerifiablePrescriptionsComponent implements OnInit {
     sectionOne: {
       sectionTitle: 'Use Cases',
       mainTitle: 'Verifiable Prescriptions',
-      mainIcon: '../../assets/images/Use-Case-Prescription-Icon.png',
+      mainIcon: 'assets/images/Use-Case-Prescription-Icon.png',
       subTitleOne: `What's the Problem?`,
       textAreaOne: [
         {
@@ -27,7 +27,7 @@ export class VerifiablePrescriptionsComponent implements OnInit {
         }],
       subTitleTwo: 'Use Case Flow',
       textAreaTwo: '',
-      imageOne: '../../assets/images/Verifialbe-Prescription-Ecosystem-Diagram-Numbers-Inside.png',
+      imageOne: 'assets/images/Verifialbe-Prescription-Ecosystem-Diagram-Numbers-Inside.png',
       textAreaThree: [
         {
           p: `1. A medical board issues a digital license to a physician. The 
@@ -57,7 +57,7 @@ export class VerifiablePrescriptionsComponent implements OnInit {
       title: 'Why Choose Veres',
       card: [
         {
-        icon: '../../assets/images/icons8-Invisible-128.png',
+        icon: 'assets/images/icons8-Invisible-128.png',
         title: 'Privacy Aware',
         p: [
           {
@@ -65,7 +65,7 @@ export class VerifiablePrescriptionsComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Clock-128.png',
+        icon: 'assets/images/icons8-Clock-128.png',
         title: 'Real Time',
         p: [
           {
@@ -73,7 +73,7 @@ export class VerifiablePrescriptionsComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Money-128.png',
+        icon: 'assets/images/icons8-Money-128.png',
         title: 'Lower Costs',
         p: [
           {
@@ -81,7 +81,7 @@ export class VerifiablePrescriptionsComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Smartphone-Tablet-128.png',
+        icon: 'assets/images/icons8-Smartphone-Tablet-128.png',
         title: 'No App Required',
         p: [
           {
@@ -89,7 +89,7 @@ export class VerifiablePrescriptionsComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Exit-Sign-128.png',
+        icon: 'assets/images/icons8-Exit-Sign-128.png',
         title: 'No Vendor Lock-in',
         p: [
           {
@@ -97,7 +97,7 @@ export class VerifiablePrescriptionsComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Puzzle-128.png',
+        icon: 'assets/images/icons8-Puzzle-128.png',
         title: 'Interoperable',
         p: [
           {
@@ -126,7 +126,7 @@ export class VerifiablePrescriptionsComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/Veres-Ecosystem-Issuer-Icon.png',
+        icon: 'assets/images/Veres-Ecosystem-Issuer-Icon.png',
         title: '',
         p: `The data on the digital ID card is made tamper-proof through 
             the use of advanced cryptography.`

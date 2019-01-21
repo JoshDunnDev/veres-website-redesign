@@ -11,7 +11,7 @@ export class AirportSecurityComponent implements OnInit {
     sectionOne: {
       sectionTitle: 'Use Cases',
       mainTitle: 'Airport Security Checkpoint Tracking',
-      mainIcon: '../../assets/images/Use-Case-Airport-Icon.png',
+      mainIcon: 'assets/images/Use-Case-Airport-Icon.png',
       subTitleOne: `What's the Problem?`,
       textAreaOne: {
         pOne: `
@@ -36,7 +36,7 @@ export class AirportSecurityComponent implements OnInit {
         database recording passenger checkpoint events. This improves security and 
         introduces various economic benefits.
       `,
-      imageOne: '../../assets/images/Airport-Security-Ecosystem-03-1.png',
+      imageOne: 'assets/images/Airport-Security-Ecosystem-03-1.png',
       textAreaThree: [
         {
           p: `1. An airline’s boarding pass kiosk verifies a passenger’s identity 
@@ -72,7 +72,7 @@ export class AirportSecurityComponent implements OnInit {
       title: 'Why Choose Veres',
       card: [
         {
-        icon: '../../assets/images/icons8-Lock-2-128.png',
+        icon: 'assets/images/icons8-Lock-2-128.png',
         title: 'Secure',
         p: [
           {
@@ -83,7 +83,7 @@ export class AirportSecurityComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Money-128.png',
+        icon: 'assets/images/icons8-Money-128.png',
         title: 'Economical',
         p: [
           {
@@ -94,7 +94,7 @@ export class AirportSecurityComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Thumbs-Up-128.png',
+        icon: 'assets/images/icons8-Thumbs-Up-128.png',
         title: 'Convenient',
         p: [
           {
@@ -102,7 +102,7 @@ export class AirportSecurityComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Invisible-128.png',
+        icon: 'assets/images/icons8-Invisible-128.png',
         title: 'Privacy Protecting',
         p: [
           {

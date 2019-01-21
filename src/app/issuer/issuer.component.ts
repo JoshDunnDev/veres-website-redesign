@@ -22,9 +22,9 @@ export class IssuerComponent implements OnInit {
           regulatory compliance.`
         }
       ],
-      mainImage: '../../assets/images/Veres-Ecosystem-Diagram-Cropped-for-Website.png',
+      mainImage: 'assets/images/Veres-Ecosystem-Diagram-Cropped-for-Website.png',
       subTitleOne: 'Issuer',
-      subImageOne: '../../assets/images/Veres-Ecosystem-Issuer-Icon.png',
+      subImageOne: 'assets/images/Veres-Ecosystem-Issuer-Icon.png',
       textAreaOne: [
         {
           p: `Veres Issuer enables organizations to issue digital credentials 
@@ -36,7 +36,7 @@ export class IssuerComponent implements OnInit {
           p: `A digital credential is made tamper-proof through the use of advanced cryptography.`,
         }],
       subTitleTwo: 'Verifier',
-      subImageTwo: '../../assets/images/Veres-Ecosystem-Verifier-Icon.png',
+      subImageTwo: 'assets/images/Veres-Ecosystem-Verifier-Icon.png',
       textAreaTwo: [
         {
           p: `Organizations utilize the Veres Verifier to evaluate the 
@@ -53,14 +53,14 @@ export class IssuerComponent implements OnInit {
           by a physician.`,
         }],
       subTitleThree: 'Veres Issuer and Verifier software can be used for a wide variety of use cases.',
-      subImageThree: '../../assets/images/Verifiable-Claim-Use-Case-Examples-01-1.png',
-      subImageThreeMobile: '../../assets/images/Verifiable-Claim-Use-Case-Examples-04.png'
+      subImageThree: 'assets/images/Verifiable-Claim-Use-Case-Examples-01-1.png',
+      subImageThreeMobile: 'assets/images/Verifiable-Claim-Use-Case-Examples-04.png'
     },
     sectionTwo: {
       title: 'Why Choose Veres',
       card: [
         {
-        icon: '../../assets/images/icons8-Positive-Dynamic-128.png',
+        icon: 'assets/images/icons8-Positive-Dynamic-128.png',
         title: 'Control',
         p: [
           {
@@ -68,7 +68,7 @@ export class IssuerComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Offline-128.png',
+        icon: 'assets/images/icons8-Offline-128.png',
         title: 'Works Offline',
         p: [
           {
@@ -76,7 +76,7 @@ export class IssuerComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Smartphone-Tablet-128.png',
+        icon: 'assets/images/icons8-Smartphone-Tablet-128.png',
         title: 'No App Required',
         p: [
           {
@@ -84,7 +84,7 @@ export class IssuerComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Database-View-128.png',
+        icon: 'assets/images/icons8-Database-View-128.png',
         title: 'Flexible Data Storage',
         p: [
           {
@@ -92,7 +92,7 @@ export class IssuerComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-SMS-128.png',
+        icon: 'assets/images/icons8-SMS-128.png',
         title: 'Messaging Channel',
         p: [
           {
@@ -100,7 +100,7 @@ export class IssuerComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Exit-Sign-128.png',
+        icon: 'assets/images/icons8-Exit-Sign-128.png',
         title: 'No Vendor Lock-in',
         p: [
           {

@@ -24,9 +24,9 @@ export class LedgerComponent implements OnInit {
           tamper-proof, and auditable with a high degree of confidence.`
         }
       ],
-      mainImage: '../../assets/images/Blockchain-Graphic-Darker-01.png',
+      mainImage: 'assets/images/Blockchain-Graphic-Darker-01.png',
       subTitleOne: 'Let’s explore some of the advantages decentralized ledgers have over a centralized databases.',
-      subImageOne: '../../assets/images/Centralized-Database-Diagram.png',
+      subImageOne: 'assets/images/Centralized-Database-Diagram.png',
       textAreaOne: [
         {
           bold: 'Central authority: ',
@@ -46,7 +46,7 @@ export class LedgerComponent implements OnInit {
           p: `forces a high-availability guarantee and increases ecosystem costs.`,
         }],
       subTitleTwo: '',
-      subImageTwo: '../../assets/images/Blockchain-Database-Diagram.png',
+      subImageTwo: 'assets/images/Blockchain-Database-Diagram.png',
       textAreaTwo: [
         {
           bold: 'No central authority: ',
@@ -70,7 +70,7 @@ export class LedgerComponent implements OnInit {
           Internet outages.`,
         }],
       subTitleThree: '',
-      subImageThree: '../../assets/images/Veres-Ecosystem-Diagram-Cropped-for-Website.png',
+      subImageThree: 'assets/images/Veres-Ecosystem-Diagram-Cropped-for-Website.png',
       textAreaThree:
         {
           pOne: 'Veres is developing ',
@@ -91,7 +91,7 @@ export class LedgerComponent implements OnInit {
       custom built applications.`,
       card: [
         {
-        icon: '../../assets/images/icons8-Module-128.png',
+        icon: 'assets/images/icons8-Module-128.png',
         title: 'Modular Architecture',
         p: [
           {
@@ -99,7 +99,7 @@ export class LedgerComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Handshake-128.png',
+        icon: 'assets/images/icons8-Handshake-128.png',
         title: 'Configurable Authorization',
         p: [
           {
@@ -107,7 +107,7 @@ export class LedgerComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Positive-Dynamic-128.png',
+        icon: 'assets/images/icons8-Positive-Dynamic-128.png',
         title: 'Scaling and Management',
         p: [
           {
@@ -115,7 +115,7 @@ export class LedgerComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Smartphone-Tablet-128.png',
+        icon: 'assets/images/icons8-Smartphone-Tablet-128.png',
         title: 'No App Required',
         p: [
           {
@@ -123,7 +123,7 @@ export class LedgerComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Running-128.png',
+        icon: 'assets/images/icons8-Running-128.png',
         title: 'Rapid Prototyping',
         p: [
           {
@@ -131,7 +131,7 @@ export class LedgerComponent implements OnInit {
           }]
         },
         {
-        icon: '../../assets/images/icons8-Database-View-128.png',
+        icon: 'assets/images/icons8-Database-View-128.png',
         title: 'Flexible Data Storage',
         p: [
           {

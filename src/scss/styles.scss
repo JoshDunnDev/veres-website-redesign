@@ -204,6 +204,21 @@ body {
                 .nav-selected {
                     color: colors(main-color);
                 }
+
+                .show-use-cases,
+                .show-eco {
+                    @include mobile {
+                        display: flex !important;
+                    }
+                }
+
+                .hide-use-cases,
+                .hide-eco {
+                    @include mobile {
+                        display: none !important;
+                    }
+                }
+
             }
 
             #nav-links .nav-link:nth-child(4) {
@@ -237,6 +252,46 @@ body {
                 padding: 21px;
             }
         }
+    }
+
+    .to-top {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+
+    @keyframes fadeInRight {
+        0% {
+           opacity: 0;
+           transform: translateX(25px);
+        }
+        100% {
+           opacity: 1;
+           transform: translateX(0);
+        }
+    } 
+    
+    @keyframes fadeOutRight {
+        0% {
+           opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+         }
+    }  
+
+    .show-to-top {
+        animation-name: fadeInRight;
+        animation-duration: 0.7s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        display: block;
+    }
+
+    .hide-to-top {
+        display: none;
     }
 
     main {
@@ -427,6 +482,7 @@ body {
                             font-family: 'Helvetica Neue', Arial, sans-serif;
                             font-weight: 500;
                             margin-top: 25px;
+                            border: none;
                             cursor: pointer;
                         }
                     }
@@ -870,6 +926,10 @@ body {
 
                 .hide-arrow {
                     display: none;
+
+                    @include mobile {
+                        display: block;
+                    }
                 }
     
             }
