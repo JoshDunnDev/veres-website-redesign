@@ -7,6 +7,8 @@
           <p>
             Phone: 1-540-961-4469
             <br>
+            Contact: <a href="mailto:contact@digitalbazaar.com">sales@digitalbazaar.com</a>
+            <br>
             Sales: <a href="mailto:sales@digitalbazaar.com">sales@digitalbazaar.com</a>
             <br>
             Support: <a href="mailto:support@digitalbazaar.com">support@digitalbazaar.com</a>
@@ -19,21 +21,4 @@
         </div>
       </div>
   </section>
-  <form [formGroup]="form" (ngSubmit)="submit(form)" id="contact-form">
-    <div class="input-line-one form-group">
-      <input required formControlName="name" name="name" type="text" placeholder="Name">
-      <input required formControlName="email" name="email" type="text" placeholder="Email">
-    </div>
-    <div class="input-line-two form-group">
-      <input formControlName="company" name="company" type="text" placeholder="Company (Optional)">
-    </div>
-    <div class="input-line-three form-group">
-      <textarea required formControlName="message" name="message" type="text" placeholder="Message"></textarea>
-    </div>
-    <div *ngIf="submitted" class="submitted-message">Message has been sent.</div>
-    <div class="submit-button">
-      <button [disabled]="!form.valid">Submit</button>
-    </div>
-    
-  </form>
 </main>
